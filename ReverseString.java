@@ -1,3 +1,9 @@
+/*
+Author: Ronak Patel
+
+First challenge in TheDailyByte series. Reverse a string.
+
+*/
 public class ReverseString
 {
   public static void main(String args[])
@@ -10,12 +16,18 @@ public class ReverseString
     //Placeholder string to test different cases
     String str = test2;
 
+    //Testing the method with the 3 examples from above
     revString(test1);
     revString(test2);
     revString(test3);
 
   }
 
+  /*
+  Method to reverse the string given using a reverse for loop starting at
+  the end of the string and iterating back to the start, printing as it
+  iterates
+  */
   public static void revString(String str){
     for(int i = str.length() - 1; i >= 0; i--)
     {
@@ -24,4 +36,3 @@ public class ReverseString
     System.out.print("\n");
   }
 }
-//Comment
