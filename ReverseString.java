@@ -6,33 +6,30 @@ First challenge in TheDailyByte series. Reverse a string.
 */
 public class ReverseString
 {
-  public static void main(String args[])
-  {
-    //Intiantiate test strings given on coding prompt
-    String test1 = "Cat";
-    String test2 = "The Daily Byte";
-    String test3 = "civic";
+	public static void main(String arg[]) 
+	{
+		//Create test strings
+		String str1 = "Cat";
+		String str2 = "The Daily Byte";
+	  	String str3 = "civic";
 
-    //Placeholder string to test different cases
-    String str = test2;
+		//Print string returned by method calls
+		System.out.println(revString(str1));
+		System.out.println(revString(str2));
+		System.out.println(revString(str3));
+	}
 
-    //Testing the method with the 3 examples from above
-    revString(test1);
-    revString(test2);
-    revString(test3);
+	public static String revString(String str)
+	{
+		//Create an empty string
+		String reversedString = "";
 
-  }
-
-  /*
-  Method to reverse the string given using a reverse for loop starting at
-  the end of the string and iterating back to the start, printing as it
-  iterates
-  */
-  public static void revString(String str){
-    for(int i = str.length() - 1; i >= 0; i--)
-    {
-      System.out.print(str.charAt(i));
-    }
-    System.out.print("\n");
-  }
+		//Iterate backwards through the str passed in
+		for(int i = str.length()-1; i > -1; i--)
+		{
+			//Add character at index i into reversed string 
+			reversedString += str.charAt(i);
+		}
+		return reversedString;
+	}
 }
