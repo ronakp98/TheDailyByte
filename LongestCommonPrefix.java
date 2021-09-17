@@ -15,6 +15,7 @@ public class LongestCommonPrefix {
         System.out.println(commonPrefix(array3));
     }
 
+    
     public static String commonPrefix(String[] inArray)
     {
         int maxLength = smallest(inArray).length();
@@ -47,7 +48,7 @@ public class LongestCommonPrefix {
         return (inArray[0].substring(0, substring));
     }
 
-    
+
     public static String smallest(String words[]) {
         if (words == null || words.length < 1) {
             return "";
